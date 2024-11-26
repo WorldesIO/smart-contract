@@ -1,10 +1,14 @@
 {
   "name": "worldes",
   "scripts": {
+    "auth": "graph auth --studio *********",
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --studio worldes-sepolia-v2",
-    "deploy-v1": "graph deploy --studio worldes-sopelia"
+    "deploy": "graph deploy --studio worldes-arb-test",
+    "deploy-v1": "graph deploy --studio worldes-sopelia",
+    "prepare:internal": "mustache graph/config/sepolia-internal.json graph/worldes_dex_template.yaml > subgraph.yaml",
+    "prepare:public": "mustache graph/config/sepolia-public.json graph/worldes_dex_template.yaml > subgraph.yaml",
+    "prepare:arbtrium": "mustache graph/config/arbtrium-one.json graph/worldes_dex_template.yaml > subgraph.yaml"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.0",

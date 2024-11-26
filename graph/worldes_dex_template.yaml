@@ -21,6 +21,12 @@ dataSources:
       abis:
         - name: WorldesDvmProxy
           file: ./graph/abis/WorldesDvmProxy.json
+        - name: ERC20
+          file: ./graph/abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./graph/abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./graph/abis/ERC20NameBytes.json
       eventHandlers:
         - event: OrderHistory(address,address,address,uint256,uint256)
           handler: handleOrderHistory
